@@ -2,8 +2,9 @@
   "name": "OnixClientLogger",
   "displayName": "OnixClientLogger",
   "icon": "images/OnixClientLogo.png",
-  "description": "Logs Onix Client scripting logs to the console, use importLib(\"OnixClientVSLogger\") in your code to import the library, and use vs.log() to log stuff.",
-  "version": "0.0.1",
+  "description": "Logs Onix Client Scripting logs to the Visual Studio Code console.",
+  "version": "1.0.0",
+  "publisher": "rosie",
   "engines": {
     "vscode": "^1.78.0"
   },

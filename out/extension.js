@@ -7,6 +7,8 @@ function activate(context) {
     console.log('Congratulations, your extension "onixclientlogger" is now active!');
     let disposable = vscode.commands.registerCommand('onixclientlogger.Logger', () => {
         vscode.window.showInformationMessage('Onix Client Logger Initialized!');
+        const outputChannel = vscode.window.createOutputChannel('Onix Client Logger');
+        outputChannel.show();
         const filePath = `${process.env.LOCALAPPDATA}\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\RoamingState\\OnixClient\\Scripts\\Data\\OnixVSLogs\\OnixVSLogs.txt`;
         fs.watch(filePath, (event, filename) => {
             if (event === 'change' && filename === 'OnixVSLogs.txt') {
@@ -15,8 +17,8 @@ function activate(context) {
                         vscode.window.showErrorMessage('An error occurred while reading the file.');
                         return;
                     }
-                    console.clear();
-                    console.log(data);
+                    outputChannel.clear();
+                    outputChannel.appendLine(data);
                 });
             }
         });
