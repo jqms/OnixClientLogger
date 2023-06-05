@@ -1,5 +1,5 @@
 {
-  "name": "onixclientlogger",
+  "name": "OnixClientLogger",
   "displayName": "OnixClientLogger",
   "icon": "images/OnixClientLogo.png",
   "description": "Logs Onix Client scripting logs to the console, use importLib(\"OnixClientVSLogger\") in your code to import the library, and use vs.log() to log stuff.",
@@ -15,7 +15,7 @@
     "Other"
   ],
   "activationEvents": [],
-  "main": "./out/extension.js",
+  "main": "out/extension.js",
   "contributes": {
     "commands": [
       {
