@@ -1,4 +1,4 @@
-Logs Onix Client scripting logs to the VS console, use importLib("OnixClientVSLogger") in your code to import the library, and use vs.log() to log stuff.
+Logs Onix Client scripting logs to the VS console, use ```lua importLib("OnixClientVSLogger")``` in your code to import the library, and use ```lua vs.log()``` to log stuff.
 
 ## Requirements
 - [Onix Client Premium Scripting](https://onixclient.com/patreon) is required to use the Onix Client Logger extension.
